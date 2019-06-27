@@ -25,5 +25,12 @@ docker = new UsernamePasswordCredentialsImpl(
         "PLACEHOLDER_PRIVATE_DOCKER_REGISTRY_PASSWORD"
 )
 
+kubernetes = new StringCredentialsImpl(
+        CredentialsScope.GLOBAL,
+        "kubernetes-ci-yourdomain-com-credentials",
+        "Kubernetes Cluster",
+        Secret.fromString("PLACEHOLDER_KUBERNETES_ADMIN_TOKEN"))
+
 store.addCredentials(domain, usernameAndPassword)
 store.addCredentials(domain, docker)
+store.addCredentials(domain, kubernetes)
