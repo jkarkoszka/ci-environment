@@ -9,7 +9,7 @@ RUN apt-get update && \
  apt-get update && \
  apt-get install -y docker-ce
 
-RUN /usr/local/bin/install-plugins.sh chucknorris github bitbucket job-dsl groovy workflow-aggregator branch-api github-organization-folder matrix-auth ws-cleanup antisamy-markup-formatter build-timeout credentials-binding cloudbees-folder timestamper ant gradle github-branch-source pipeline-github-lib pipeline-stage-view git subversion ssh-slaves pam-auth ldap email-ext
+RUN /usr/local/bin/install-plugins.sh chucknorris github bitbucket job-dsl groovy workflow-aggregator branch-api github-organization-folder matrix-auth ws-cleanup antisamy-markup-formatter build-timeout credentials-binding cloudbees-folder timestamper ant gradle github-branch-source pipeline-github-lib pipeline-stage-view git subversion ssh-slaves pam-auth ldap email-ext kubernetes-cli kubernetes-credentials
 
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 
